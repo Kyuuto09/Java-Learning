@@ -1,4 +1,5 @@
 package lab1;
+
 import java.util.Scanner;
 
 public class first {
@@ -12,7 +13,6 @@ public class first {
         // int multiply = a * 2;
         String message = String.format("Multiply by two: %,d", num * 2);
 
-        // if (num)
         System.out.println(message);
     }
 
