@@ -90,5 +90,31 @@ public class Main {
         // By the way: multiplication has highest priority
         int q = 10 + 2 * 3; // to change priority just add (); (10 + 2) * 3 = 36
         System.out.println(q);
+
+        System.out.println("Hello " + 7 + 2); // this wil be a string Hello 72
+        System.out.println("Hello " + (7 + 2)); // () helps to add them Hello 9
+
+        // TASK for Refreshing brain
+        // PART 1
+        String user = " Admin123 ";
+        String formatUser = user.strip();
+
+        if (formatUser.equalsIgnoreCase("Admin")) {
+            System.out.println("Reserved username!");
+        } else if (formatUser.length() > 15) {
+            System.out.println("Too long!");
+        } else {
+            System.out.printf("Username accepted: <%s>\n", formatUser);
+        }
+
+        // PART 2
+        int[] scores = { 78, 90, 66, 84, 95 };
+
+        System.out.printf("Original array is: %s\n", Arrays.toString(scores));
+
+        Arrays.sort(scores);
+        System.out.println("Sorted scores: " + Arrays.toString(scores));
+        System.out.println("Lowest score: " + scores[0]);
+        System.out.println("Highest score: " + scores[scores.length - 1]);
     }
 }
