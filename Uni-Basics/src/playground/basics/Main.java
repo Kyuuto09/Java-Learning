@@ -1,3 +1,5 @@
+package playground.basics;
+
 import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -116,5 +118,24 @@ public class Main {
         System.out.println("Sorted scores: " + Arrays.toString(scores));
         System.out.println("Lowest score: " + scores[0]);
         System.out.println("Highest score: " + scores[scores.length - 1]);
+
+        // ------------------------
+        // Implicit casting
+        // ------------------------
+        System.out.println("----------Implicit casting----------");
+
+        // byte > short > int > long > float > double
+        double x1 = 1.1;
+        int y2 = (int) x1 + 2;
+        System.out.println(
+                "The x1 value was formated\nto the interger by using (int) x1\nso the result of 1.1 + 2 -> " + y2);
+
+        // ** Imporant String Casting
+        System.out.println("--Strings Casting--");
+
+        String someString = "1.2";
+
+        // ! Integer.parseInt(variable) or Double.parseDouble(variable)
+        System.out.printf("String to Integer casting: %s\n", Double.parseDouble(someString) + 2);
     }
 }
