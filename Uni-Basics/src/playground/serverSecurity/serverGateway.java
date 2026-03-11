@@ -6,13 +6,14 @@ import java.util.Scanner;
 public class serverGateway {
 
     final static List<String> ACCOUNT_TYPE = List.of("admin", "researcher", "guest");
-    final static List<String> ACCESS_GRANTED = List.of("Full Server Access Granted.", "Dataset Access Granted.", "Access Denied.");
+    final static List<String> ACCESS_GRANTED = List.of("Full Server Access Granted.", "Dataset Access Granted.",
+            "Access Denied.");
 
     static List<String> securityLoginBlackList = List.of("DROP_TABLE_USERS", "SELECT *");
 
-    //     SECURITY ZONE
+    // SECURITY ZONE
     // ---------------------
-    //       FireWall
+    // FireWall
 
     public static String fireWall(String account, byte clearanceLevel) {
 
@@ -25,7 +26,7 @@ public class serverGateway {
         return gatewayStatus(account, clearanceLevel);
     }
 
-    //     SECURITY ZONE
+    // SECURITY ZONE
     // ---------------------
 
     public static String gatewayStatus(String account, byte clearanceLevel) {
