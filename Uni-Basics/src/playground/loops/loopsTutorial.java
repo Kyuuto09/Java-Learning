@@ -16,6 +16,10 @@ public class loopsTutorial {
             System.out.println();
         }
 
+        // counting down
+        for (int i = number; i >= 1; i--) {
+            System.out.println(i);
+        }
 
     }
 }
