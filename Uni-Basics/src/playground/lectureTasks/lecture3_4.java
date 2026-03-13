@@ -176,5 +176,6 @@ public class lecture3_4 {
         } while (i >= 1);
 
         sc.close();
+
     }
 }
