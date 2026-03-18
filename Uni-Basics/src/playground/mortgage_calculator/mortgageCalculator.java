@@ -16,16 +16,41 @@ public class mortgageCalculator {
     }
 
     static void main(String[] args) {
+        double loanMoney = 0;
+        double annualRate = 0;
+        byte loanPeriod = 0;
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Money to loan: "); // P amount to loan
-        double loanMoney = sc.nextDouble();
+        while (true) {
+            System.out.print("Money to loan($1K - $1M): "); // P amount to loan
+            loanMoney = sc.nextDouble();
 
-        System.out.print("Annual Interest Rate: "); // R monthly interest rate / 100 and then / 12
-        double annualRate = sc.nextDouble();
+            if (loanMoney >= 1000 && loanMoney <= 1_000_000)
+                break;
 
-        System.out.print("Period (Years): ");
-        byte loanPeriod = sc.nextByte();
+            System.out.println("Invalid range!\nPlease enter the sum between $1K - $1M");
+        }
+
+        while (true) {
+            System.out.print("Annual Interest Rate: "); // R monthly interest rate / 100 and then / 12
+            annualRate = sc.nextDouble();
+
+            if (annualRate >= 1 && annualRate <= 30)
+                break;
+
+            System.out.println("Invalid range!\nEnter a value between 1 - 30");
+        }
+
+        while (true) {
+            System.out.print("Period (Years): ");
+            loanPeriod = sc.nextByte();
+
+            if (loanPeriod >= 1 && loanPeriod <= 30)
+                break;
+
+            System.out.println("Invalid range!\nEnter a value between 1 - 30");
+        }
 
         System.out.printf("Mortgage: %s\n", NumberFormat.getCurrencyInstance().format(calc(loanMoney, annualRate, loanPeriod)));
     }
