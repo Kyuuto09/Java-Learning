@@ -35,14 +35,14 @@ public class thirdTask {
          */
 
         // sum the numbers------------
-        // int i = 1;
-        // int sum = 0;
-        // while (num >= i) {
-        // sum += i;
-        // System.out.println(i);
-        // i++;
-        // }
-        // System.out.println(sum);
+         int i = 1;
+         int sum = 0;
+         while (num >= i) {
+         sum += i;
+         System.out.println(i);
+         i++;
+         }
+         System.out.println(sum);
 
     }
 }

@@ -1,18 +1,20 @@
 package playground.lectureTasks;
 
-public class lecture5_6 {
-    static void main(String[] args) {
-        final double epsilon = 0.0001;
+import java.util.Scanner;
 
-        double x = 0.5;
+public class lecture5_6 {
+
+    public static void arsinh(double epsilon, double x) {
+        // start from second term (first term x already in sum)
         double sum = x;
         double term = x;
 
         double sign = -1.0;
         double power = 3.0;
-        double coefficient = 1.0 / 2.0;
+        double coefficient = 1.0 / 3.0;
 
-        // start from second term (first term x already in sum)
+        int iterations = 1;
+
         while (Math.abs(term) > epsilon) {
             //double term1 = -1.0 * (1.0 / 2.0) * (Math.pow(x, 3) / 3.0);
             //double term2 = 1.0 * ( (1.0 * 3.0) / (2.0 * 4.0) ) * (Math.pow(x, 5) / 5);
@@ -27,24 +29,30 @@ public class lecture5_6 {
 
 
             // update coefficient: multiply by next pattern (odd/even)
-            //coefficient *= (power - 2) / (power - 1);
+            coefficient *= (power - 2) / (power - 1);
 
-            // Pattern explanation:
-            // Each step multiplies coefficient by (odd number)/(next even number):
-            // 3/4, 5/6, 7/8, 9/10...
-            // We hardcode it here to clearly see how the pattern evolves.
-            // HARD-CODED version to understand the pattern step-by-step
-            if (power == 5) {
-                coefficient *= 3.0 / 4.0;   // from 1/2 → 3/8
-            } else if (power == 7) {
-                coefficient *= 5.0 / 6.0;   // from 3/8 → 15/48
-            } else if (power == 9) {
-                coefficient *= 7.0 / 8.0;   // next step
-            } else if (power == 11) {
-                coefficient *= 9.0 / 10.0;  // next step
-            }
+            iterations++;
         }
 
-        System.out.println(sum);
+        System.out.println("Series: " + sum);
+
+        double real = Math.log(x + Math.sqrt(x * x + 1));
+        System.out.println("Real: " + real);
+
+        System.out.println("Error: " + Math.abs(sum - real));
+
+        System.out.println("Iterations: " + iterations);
+    }
+    static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of epsilon: ");
+        double epsilon = sc.nextDouble();
+
+        System.out.print("Enter the value of x: ");
+        double x = sc.nextDouble();
+
+        arsinh(epsilon, x);
+
     }
 }
