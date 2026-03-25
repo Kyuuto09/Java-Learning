@@ -16,8 +16,6 @@ public class test {
 
     }
 
-
-
     public static void arrayReference() {
         // arr1 and arr2 points to the same memory e.g: 0x1234
         int[] arr1 = {33}; // arr1: here we put 33 into 0x1234
@@ -46,3 +44,22 @@ public class test {
         arrayReference();
     }
 }
+
+
+/*
+package playground;
+
+public class test {
+    public static void main(String[] args) {
+        int number = 5;
+
+        for (int i = 1; i <= number; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+ */
