@@ -29,6 +29,13 @@ public class test {
         System.out.println(arr1); // hex string
     }
 
+    public static void multiplicationTable(int number) {
+        for (int i = 1; i <= 10; i++) {
+            int result = number * i;
+            System.out.printf("%d x %d = %d\n", number, i, result);
+        }
+    }
+
     static void main(String[] args) {
         // swap
         int x = 10, y = 20;
@@ -41,7 +48,9 @@ public class test {
 
         // array
         // reference type
-        arrayReference();
+        //arrayReference();
+
+        multiplicationTable(10);
     }
 }
 
