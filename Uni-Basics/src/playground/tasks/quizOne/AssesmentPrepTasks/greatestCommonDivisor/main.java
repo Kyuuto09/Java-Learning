@@ -1,4 +1,4 @@
-package playground.tasks.quizOne.greatestCommonDivisor;
+package playground.tasks.quizOne.AssesmentPrepTasks.greatestCommonDivisor;
 
 public class main {
 
