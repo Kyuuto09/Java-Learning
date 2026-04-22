@@ -1,13 +1,13 @@
-package playground.tasks.quizTwo.isIncreasing;
+package playground.tasks.quizTwo.isDecreasing;
 
 import java.util.Arrays;
 
 public class main {
 
-    public static boolean solution(int[] arr) {
+    public static boolean task2(int[] arr) {
 
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] >= arr[i+1]) {
+            if (arr[i+1] >= arr[i]) {
                 return false;
             }
         }
@@ -17,8 +17,8 @@ public class main {
 
     public static void main(String args[]) {
 
-        int arr[] = {1, 2, 3, 4, 5};
+        int[] arr = {11, 11, 10, 8, 2};
 
-        System.out.println(solution(arr));
+        System.out.println(task2(arr));
     }
 }
