@@ -8,7 +8,7 @@ public class main {
 
         if (arr.length == 0) { return new int[0]; } // FILTER
 
-        int counter = 1;
+        int counter = 1; // always tart with one because a zero element will always be unique.
 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] != arr[i-1]) {
@@ -19,7 +19,8 @@ public class main {
         int[] newArr = new int[counter];
         newArr[0] = arr[0];
 
-        int index = 1;
+        int index = 1; // !!!!!!!!!!!!! because we assigned at a zero element, we need to start
+        // placing into a box from the 1st element.
 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] != arr[i-1]) {
