@@ -6,7 +6,7 @@
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active%20Learning-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Mastered-1f77d9?style=for-the-badge)
 
 **Welcome!** This repository documents my Java learning journey — from university fundamentals to advanced concepts.
 
@@ -19,7 +19,7 @@
 A personal space dedicated to learning and practising Java. This repository will grow over time as I progress through university labs, exercises, and projects.
 
 - **Focus:** Core Java concepts, clean code, and problem solving.
-- **Current Status:** Active Learning 🟢
+- **Current Status:** Passed the course, mastered the fundamentals or mastered tasks that I solved xD
 
 ## 📂 Structure
 
