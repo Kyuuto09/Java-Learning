@@ -2,11 +2,10 @@ package playground.tasks.exam.someTasks;
 
 public class approxSinTaylorSeries {
 
-    public static long factorial(int n) {
-
+    public static long factorial(int x) {
         long factorial = 1;
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= x; i++) {
             factorial *= i;
         }
 
@@ -15,29 +14,29 @@ public class approxSinTaylorSeries {
 
     public static double solution(double x, int terms) {
 
-        if (terms <= 0) return 0;
+        double result = 0;
+        double sign = 1;
 
-        double result = x;
-        double sign = -1.0;
+        for (int i = 1; i <= (terms*2); i+=2) {
 
-
-        for (int i = 3; i <= (terms * 2); i+=2) {
-            int power = i;
-
-            result += sign * ( (Math.pow(x, power)) / factorial(power) );
+            result += sign * ( (Math.pow(x, i)) / factorial(i) );
 
             sign *= -1;
         }
 
-        return Math.round(result * 100.0) / 100.0;
+        return result;
     }
 
     public static void main(String[] args) {
 
-        double x = 1;
-        int terms = 2;
+        System.out.println(solution(1, 1));
+        // Expected: 1.0
 
-        System.out.println(solution(x, terms));
+        System.out.println(solution(1, 2));
+        // Expected: ~0.833333
+
+        System.out.println(solution(1, 3));
+        // Expected: ~0.841667
 
     }
 }

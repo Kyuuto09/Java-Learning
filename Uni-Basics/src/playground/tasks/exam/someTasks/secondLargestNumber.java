@@ -4,7 +4,7 @@ public class secondLargestNumber {
 
     public static int solution(int[] arr) {
 
-        int largest = arr[0];
+        int largest = Integer.MIN_VALUE;
         int second = Integer.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
